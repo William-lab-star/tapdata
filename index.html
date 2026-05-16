@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TapDataGH - Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .bg-main-dark { background-color: #0b111e; }
+    .bg-panel-dark { background-color: #0f1c30; }
+    .bg-card-dark { background-color: #16253b; }
+    .border-gradient-line {
+      background: linear-gradient(90deg, #ffc107 0%, #ff5722 35%, #9c27b0 70%, #2196f3 100%);
+      height: 3px;
+    }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+  </style>
+</head>
+<body class="bg-main-dark text-white font-sans pb-12 selection:bg-blue-500 selection:text-white">
+
+  <nav class="flex items-center justify-between px-6 py-4 bg-panel-dark/90 border-b border-gray-800 sticky top-0 backdrop-blur z-50">
+    <div class="flex items-center gap-2">
+      <div class="bg-blue-600 p-2 rounded-lg text-white font-black text-xs tracking-wider">📊</div>
+      <h1 class="text-xl font-bold tracking-tight">TapData<span class="text-amber-400">GH</span></h1>
+    </div>
+    <div class="flex items-center gap-3">
+      <div class="p-2 bg-card-dark rounded-xl border border-gray-800 cursor-pointer hover:bg-gray-800 transition">¼</div>
+      <div class="p-2 bg-card-dark rounded-xl border border-gray-800 cursor-pointer hover:bg-gray-800 transition">👤</div>
+      <div class="p-2 bg-amber-500 text-black font-bold rounded-xl cursor-pointer hover:bg-amber-600 transition">☰</div>
+    </div>
+  </nav>
+
+  <main class="max-w-6xl mx-auto px-4 mt-6 space-y-6">
+
+    <section class="bg-panel-dark rounded-2xl p-6 border border-gray-800 shadow-xl">
+      <div class="flex justify-between items-start mb-4">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight mb-1">Mema wo akye, William Kpevor!</h2>
+          <p class="text-gray-400 text-sm">Good Morning! Welcome to TapDataGH</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        <a href="https://wa.me/233544799462" target="_blank" class="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-4 rounded-xl text-sm transition">📥 Deposit Now</a>
+        <a href="#store-section" class="flex items-center justify-center gap-2 bg-card-dark hover:bg-gray-800 border border-gray-800 text-gray-200 py-2.5 px-4 rounded-xl text-sm transition">📦 Bundles</a>
+        <a href="https://wa.me/233544799462" target="_blank" class="flex items-center justify-center gap-2 bg-card-dark hover:bg-gray-800 border border-gray-800 text-gray-200 py-2.5 px-4 rounded-xl text-sm transition">📄 Support</a>
+      </div>
+    </section>
+
+    <section id="store-section" class="bg-panel-dark rounded-2xl border border-gray-800 shadow-xl overflow-hidden">
+      <div class="border-gradient-line"></div>
+      <div class="p-6">
+        <h3 class="text-lg font-bold tracking-tight mb-4 text-gray-200">Place New Order (Select Network)</h3>
+        
+        <div class="grid grid-cols-3 gap-4">
+          <button onclick="switchTab('mtn')" id="btn-mtn" class="bg-card-dark border-2 border-amber-400 p-4 rounded-2xl flex flex-col items-center text-center transition group">
+            <div class="w-12 h-12 bg-amber-400 rounded-xl flex items-center justify-center text-black font-black text-xs mb-2">MTN</div>
+            <span class="font-bold text-xs text-amber-400">MTN Data</span>
+          </button>
+
+          <button onclick="switchTab('atigo')" id="btn-atigo" class="bg-card-dark border border-gray-800 p-4 rounded-2xl flex flex-col items-center text-center transition group">
+            <div class="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center text-white font-bold text-lg mb-2">☺</div>
+            <span class="font-bold text-xs text-gray-400 group-hover:text-purple-400">AT Data</span>
+          </button>
+
+          <button onclick="switchTab('telecel')" id="btn-telecel" class="bg-card-dark border border-gray-800 p-4 rounded-2xl flex flex-col items-center text-center transition group">
+            <div class="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center text-white font-black text-lg mb-2">t</div>
+            <span class="font-bold text-xs text-gray-400 group-hover:text-red-500">Telecel Data</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="bg-emerald-950/20 border border-emerald-900/50 text-emerald-400 rounded-xl p-4 text-xs space-y-2">
+      <p class="font-bold">⚡ Network Portal is delivering fast right now. Orders arrive within minutes.</p>
+      <details class="text-gray-400 cursor-pointer">
+        <summary class="font-medium text-emerald-500 underline">Why do bundles sometimes delay?</summary>
+        <p class="mt-2 text-gray-400 leading-relaxed">Some days networks face portal validation delays. Rest assured, failed actions are automatically accounted for, and queued bundles deliver directly.</p>
+      </details>
+    </div>
+
+    <div id="tab-mtn" class="tab-content active space-y-4">
+      <div class="bg-amber-400 text-black rounded-2xl p-5 flex items-center justify-between shadow-lg">
+        <div>
+          <h4 class="text-xl font-black">MTN Data Bundles</h4>
+          <p class="text-xs font-medium opacity-80">Non-Expiry • Auto Delivery</p>
+        </div>
+        <span class="bg-emerald-600 text-white font-bold text-[11px] px-2.5 py-1 rounded-full">● In Stock</span>
+      </div>
+
+      <div class="bg-red-950/30 border border-red-900/40 text-red-400 text-center py-2.5 rounded-xl text-xs font-semibold">
+        Delivery times vary • No refunds for wrong numbers • Details
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <a href="https://wa.me/233544799462?text=I%20want%20to%20order%20MTN%201GB%20for%20GHS%204.20" target="_blank" class="bg-amber-400 text-black p-5 rounded-2xl flex flex-col justify-between h-36 border border-transparent hover:border-white transition shadow-md">
+          <div class="flex justify-between items-start"><span class="font-black text-2xl">1GB</span><span class="text-[10px] font-bold opacity-60">MTN</span></div>
+          <div class="flex justify-between items-end"><span class="text-lg font-black">GH₵ 4.20</span><span class="text-[10px] font-bold bg-black/10 px-2 py-0.5 rounded-full">No Expiry</span></div>
+        </a>
+        <a href="https://wa.me/233544799462?text=I%20want%20to%20order%20MTN%202GB%20for%20GHS%208.80" target="_blank" class="bg-amber-400 text-black p-5 rounded-2xl flex flex-col justify-between h-36 border border-transparent hover:border-white transition shadow-md">
+          <div class="flex justify-between items-start"><span class="font-black text-2xl">2GB</span><span class="text-[10px] font-bold opacity-60">MTN</span></div>
+          <div class="flex justify-between items-end"><span class="text-lg font-black">GH₵ 8.80</span><span class="text-[10px] font-bold bg-black/10 px-2 py-0.5 rounded-full">No Expiry</span></div>
+        </a>
+        <a href="https://wa.me/233544799462?text=I%20want%20to%20order%20MTN%203GB%20for%20GHS%2012.80" target="_blank" class="bg-amber-400 text-black p-5 rounded-2xl flex flex-col justify-between h-36 border border-transparent hover:border-white transition shadow-md">
+          <div class="flex justify-between items-start"><span class="font-black text-2xl">3GB</span><span class="text-[10px] font-bold opacity-60">MTN</span></div>
+          <div class="flex justify-between items-end"><span class="text-lg font-black">GH₵ 12.80</span><span class="text-[10px] font-bold bg-black/10 px-2 py-0.5 rounded-full">No Expiry</span></div>
+        </a>
+        <a href="https://wa.me/233544799462?text=I%20want%20to%20order%20MTN%204GB%20for%20GHS%2017.80" target="_blank" class="bg-amber-400 text-black p-5 rounded-2xl flex flex-col justify-between h-36 border border-transparent hover:border-white transition shadow-md">
+          <div class="flex justify-between items-start"><span class="font-black text-2xl">4GB</span><span class="text-[10px] font-bold opacity-60">MTN</span></div>
+          <div class="flex justify-between items-end"><span class="text-lg font-black">GH₵ 17.80</span><span class="text-[10px] font-bold bg-black/10 px-2 py-0.5 rounded-full">No Expiry</span></div>
+        </a>
+      </div>
+    </div>
+
+    <div id="tab-atigo" class="tab-content space-y-4">
+      <div class="bg-purple-600 text-white rounded-2xl p-5 flex items-center justify-between shadow-lg">
+        <div>
+          <h4 class="text-xl font-black">AT iShare Bundles</h4>
+          <p class="text-xs opacity-80">Non-Expiry • Auto Delivery</p>
+        </div>
+        <span class="bg-red-600 text-white font-bold text-[11px] px-2.5 py-1 rounded-full">● Out of Stock</span>
+      </div>
+
+      <div class="bg-amber-950/20 border border-amber-900/50 text-amber-500 text-center py-2.5 rounded-xl text-[11px] px-2">
+        ⚠ Always check client balance before placing • SMS may not be received after delivery • Details
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 opacity-75">
+        <div class="bg-purple-900/40 border border-purple-800 p-4 rounded-xl relative flex flex-col justify-between h-32">
+          <span class="absolute top-2 right-2 text-[9px] bg-red-600 px-1.5 py-0.5 rounded text-white uppercase font-bold">Out of stock</span>
+          <p class="text-2xl font-black">1 GB</p>
+          <div class="flex justify-between items-end text-xs"><span class="text-purple-300 font-bold">GH₵ 3.95</span><span class="text-gray-500">60 Days</span></div>
+        </div>
+        <div class="bg-purple-900/40 border border-purple-800 p-4 rounded-xl relative flex flex-col justify-between h-32">
+          <span class="absolute top-2 right-2 text-[9px] bg-red-600 px-1.5 py-0.5 rounded text-white uppercase font-bold">Out of stock</span>
+          <p class="text-2xl font-black">2 GB</p>
+          <div class="flex justify-between items-end text-xs"><span class="text-purple-300 font-bold">GH₵ 8.35</span><span class="text-gray-500">60 Days</span></div>
+        </div>
+        <div class="bg-purple-900/40 border border-purple-800 p-4 rounded-xl relative flex flex-col justify-between h-32">
+          <span class="absolute top-2 right-2 text-[9px] bg-red-600 px-1.5 py-0.5 rounded text-white uppercase font-bold">Out of stock</span>
+          <p class="text-2xl font-black">5 GB</p>
+          <div class="flex justify-between items-end text-xs"><span class="text-purple-300 font-bold">GH₵ 19.50</span><span class="text-gray-500">60 Days</span></div>
+        </div>
+        <div class="bg-purple-900/40 border border-purple-800 p-4 rounded-xl relative flex flex-col justify-between h-32">
+          <span class="absolute top-2 right-2 text-[9px] bg-red-600 px-1.5 py-0.5 rounded text-white uppercase font-bold">Out of stock</span>
+          <p class="text-2xl font-black">10 GB</p>
+          <div class="flex justify-between items-end text-xs"><span class="text-purple-300 font-bold">GH₵ 38.50</span><span class="text-gray-500">60 Days</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-telecel" class="tab-content space-y-4">
+      <div class="bg-red-600 text-white rounded-2xl p-5 flex items-center justify-between shadow-lg">
+        <div>
+          <h4 class="text-xl font-black">Telecel Data Bundles</h4>
+          <p class="text-xs opacity-80">Non-Expiry • Auto Delivery</p>
+        </div>
+        <span class="bg-red-900 text-white font-bold text-[11px] px-2.5 py-1 rounded-full">● Out of Stock</span>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 opacity-75">
+        <div class="bg-red-950/30 border border-red-900/50 p-4 rounded-xl relative flex flex-col justify-between h-32">
+          <span class="absolute top-2 right-2 text-[9px] bg-red-600 px-1.5 py-0.5 rounded text-white uppercase font-bold">Out of stock</span>
+          <p class="text-2xl font-black">10 GB</p>
+          <div class="flex justify-between items-end text-xs"><span class="text-red-400 font-bold">GH₵ 38.50</span><span class="text-gray-500">60 Days</span></div>
+        </div>
+        <div class="bg-red-950/30 border border-red-900/50 p-4 rounded-xl relative flex flex-col justify-between h-32">
+          <span class="absolute top-2 right-2 text-[9px] bg-red-600 px-1.5 py-0.5 rounded text-white uppercase font-bold">Out of stock</span>
+          <p class="text-2xl font-black">15 GB</p>
+          <div class="flex justify-between items-end text-xs"><span class="text-red-400 font-bold">GH₵ 54.85</span><span class="text-gray-500">60 Days</span></div>
+        </div>
+        <div class="bg-red-950/30 border border-red-900/50 p-4 rounded-xl relative flex flex-col justify-between h-32">
+          <span class="absolute top-2 right-2 text-[9px] bg-red-600 px-1.5 py-0.5 rounded text-white uppercase font-bold">Out of stock</span>
+          <p class="text-2xl font-black">20 GB</p>
+          <div class="flex justify-between items-end text-xs"><span class="text-red-400 font-bold">GH₵ 73.80</span><span class="text-gray-500">60 Days</span></div>
+        </div>
+        <div class="bg-red-950/30 border border-red-900/50 p-4 rounded-xl relative flex flex-col justify-between h-32">
+          <span class="absolute top-2 right-2 text-[9px] bg-red-600 px-1.5 py-0.5 rounded text-white uppercase font-bold">Out of stock</span>
+          <p class="text-2xl font-black">30 GB</p>
+          <div class="flex justify-between items-end text-xs"><span class="text-red-400 font-bold">GH₵ 107.70</span><span class="text-gray-500">60 Days</span></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="bg-panel-dark rounded-2xl p-6 border border-gray-800 shadow-xl grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div class="space-y-1">
+        <div class="text-gray-400 text-xs font-medium uppercase tracking-wider">💳 Wallet Balance</div>
+        <div class="text-2xl font-black text-white">GHS 0.00</div>
+      </div>
+      <div class="space-y-1 border-l border-gray-800/60">
+        <div class="text-gray-400 text-xs font-medium uppercase tracking-wider">📦 Orders Today</div>
+        <div class="text-2xl font-black text-white">0</div>
+      </div>
+      <div class="space-y-1 border-l border-gray-800/60">
+        <div class="text-gray-400 text-xs font-medium uppercase tracking-wider">💾 GB Sold Today</div>
+        <div class="text-2xl font-black text-white">0.0 GB</div>
+      </div>
+      <div class="space-y-1 border-l border-gray-800/60">
+        <div class="text-gray-400 text-xs font-medium uppercase tracking-wider">💰 Revenue Today</div>
+        <div class="text-2xl font-black text-white">GHS 0.00</div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="fixed bottom-4 left-4 z-50">
+    <a href="https://wa.me/233544799462" target="_blank" class="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center shadow-lg shadow-emerald-500/30 hover:scale-110 transition text-xl">💬</a>
+  </div>
+
+  <script>
+    function switchTab(network) {
+      // Hide all contents
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      
+      // Remove active borders from switcher buttons
+      document.getElementById('btn-mtn').className = "bg-card-dark border border-gray-800 p-4 rounded-2xl flex flex-col items-center text-center transition group";
+      document.getElementById('btn-atigo').className = "bg-card-dark border border-gray-800 p-4 rounded-2xl flex flex-col items-center text-center transition group";
+      document.getElementById('btn-telecel').className = "bg-card-dark border border-gray-800 p-4 rounded-2xl flex flex-col items-center text-center transition group";
+      
+      // Show chosen content tab
+      document.getElementById('tab-' + network).classList.add('active');
+      
+      // Highlight selected icon button border
+      if(network === 'mtn') {
+        document.getElementById('btn-mtn').className = "bg-card-dark border-2 border-amber-400 p-4 rounded-2xl flex flex-col items-center text-center transition";
+      } else if(network === 'atigo') {
+        document.getElementById('btn-atigo').className = "bg-card-dark border-2 border-purple-500 p-4 rounded-2xl flex flex-col items-center text-center transition";
+      } else if(network === 'telecel') {
+        document.getElementById('btn-telecel').className = "bg-card-dark border-2 border-red-600 p-4 rounded-2xl flex flex-col items-center text-center transition";
+      }
+    }
+  </script>
+
+</body>
+</html>
